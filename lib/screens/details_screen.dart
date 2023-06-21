@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_peliculas/widgets/widgets.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -17,6 +18,11 @@ class DetailsScreen extends StatelessWidget {
             delegate: SliverChildListDelegate([
           const _PosterAndTitle(),
           const _Overview(),
+          const _Overview(),
+          const _Overview(),
+          const _Overview(),
+          const _Overview(),
+          CastingCards()
         ]))
       ],
     ));
@@ -39,6 +45,7 @@ class _CustomAppBar extends StatelessWidget {
         title: Container(
             width: double.infinity,
             alignment: Alignment.bottomCenter,
+            padding: const EdgeInsets.only(bottom: 10),
             color: Colors.black12,
             child: const Text(
               "movie.title",
@@ -123,30 +130,17 @@ class _Overview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      child: Text("""
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      child: Text(
+        """
 
 In aute officia cillum adipisicing proident. Ea nisi enim officia esse sunt dolore tempor sit id labore. Est proident et culpa ex ad esse officia.
 
-Nulla excepteur quis magna nulla ad. Sunt ex aliqua aute deserunt labore dolor eu cillum enim. Id eu qui minim ea officia. Sint ad nostrud magna nostrud culpa irure minim. Culpa non labore in sunt ipsum id.
-
-Cupidatat velit deserunt eu culpa excepteur officia minim exercitation eu quis. Consectetur excepteur aliqua deserunt nostrud fugiat quis do do deserunt ad fugiat sint. Quis dolore ullamco officia aliquip duis officia enim eiusmod non sunt pariatur proident adipisicing. Dolor eiusmod velit et aliquip in ea ut anim velit magna reprehenderit cillum qui. Ea Lorem ex incididunt do aute minim pariatur ut cillum. Deserunt aute deserunt veniam anim ex dolor. Culpa deserunt elit culpa reprehenderit duis.
-
-Exercitation aliquip do et commodo nulla elit tempor. Amet ea qui elit ipsum culpa duis consequat Lorem adipisicing et nisi pariatur. Ut elit nulla cupidatat adipisicing. Qui reprehenderit aliqua incididunt aliquip ut officia consequat proident. Est et eiusmod cupidatat dolore consequat quis excepteur deserunt consectetur eiusmod. Aute qui quis ea esse cupidatat in sint enim dolor veniam consequat veniam commodo sit.
-
-Cupidatat officia anim cupidatat occaecat magna qui ex commodo aliqua adipisicing dolore. Reprehenderit ea tempor consequat excepteur magna aute aliqua culpa dolore mollit nisi. Magna voluptate enim exercitation occaecat anim aute nostrud esse est dolore. Et irure adipisicing ea ipsum commodo. Et cillum mollit voluptate cupidatat esse.
-
-In duis ex magna anim veniam sunt nisi et dolore nostrud veniam. Sunt anim magna dolore dolore adipisicing aliquip aute sunt. Quis fugiat ipsum dolore exercitation deserunt duis irure nisi minim sint consectetur excepteur in. Elit non occaecat et culpa quis. Ipsum irure irure labore aliquip elit exercitation laboris quis quis irure fugiat pariatur.
-
-Irure aute cupidatat laboris ad veniam anim cillum est ut minim. Reprehenderit nisi cupidatat id deserunt dolor minim amet. Do proident pariatur occaecat duis. Nulla anim laboris cillum non ad proident sit dolor sint culpa quis duis et incididunt.
-
-Occaecat culpa magna amet mollit proident pariatur elit et velit anim excepteur eiusmod incididunt aliqua. Ullamco excepteur proident pariatur amet Lorem do Lorem sunt. Eiusmod exercitation aliqua ullamco amet exercitation fugiat laborum id enim. Cupidatat cillum consequat tempor excepteur adipisicing id ipsum aliquip mollit deserunt.
-
-Consequat eu nostrud minim do sit. Ipsum consequat deserunt aliquip amet velit do. Esse sint esse commodo irure eiusmod non. Enim veniam ut dolore proident.
-
-Consequat elit non consectetur commodo deserunt duis deserunt excepteur nostrud labore ut ipsum. Do ad duis elit amet eiusmod velit duis ullamco minim dolor quis eiusmod laborum velit. Et ad cupidatat ullamco amet sint.
-
-"""),
+""",
+        textAlign: TextAlign.justify,
+        style: Theme.of(context).textTheme.titleMedium,
+      ),
     );
   }
 }
