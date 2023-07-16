@@ -59,7 +59,7 @@ class _MovieSliderState extends State<MovieSlider> {
                 itemCount: widget.movies.length,
                 itemBuilder: (_, int index) => _MoviePoster(
                     widget.movies[index],
-                    "${widget.title}-${index}-${widget.movies[index].id}"),
+                    "${widget.title}-$index-${widget.movies[index].id}"),
               ),
             ),
           ],
